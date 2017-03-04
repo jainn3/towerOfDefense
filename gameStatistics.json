@@ -1,0 +1,61 @@
+{
+"monsterDead" : [
+    {
+    "monsterid":"1",
+    "noOfKilled":"5"
+    },
+    {
+    "monsterid":"2",
+    "noOfKilled":"5"    
+    },
+    {
+    "monsterid":"3",
+    "noOfKilled":"5"
+    },
+    {
+    "monsterid":"4",
+    "noOfKilled":"5"    
+    },
+    {
+    "monsterid":"5",
+    "noOfKilled":"5"
+    }
+    
+],
+
+"monsterDeadInLastSegment" :[
+    {
+    "monsterid":"1",
+    "noOfKilled":"5"
+    },
+    {
+    "monsterid":"2",
+    "noOfKilled":"5"    
+    },
+    {
+    "monsterid":"3",
+    "noOfKilled":"5"
+    },
+    {
+    "monsterid":"4",
+    "noOfKilled":"5"    
+    },
+    {
+    "monsterid":"5",
+    "noOfKilled":"5"
+    }
+],
+"finalMoney" :"500",
+"noOfTowersUpgrades":"4",
+"typesOfTower":[
+
+    {
+    "towerId":"1",
+    "amount":"5"
+    },
+    {
+    "towerId":"2",
+    "amount":"2"
+    }
+    ]
+}
