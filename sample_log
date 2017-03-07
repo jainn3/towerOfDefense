@@ -1,0 +1,125 @@
+{
+    "Type":"Money",
+    "MoneyGain":800,
+    "FinalMoney":800,
+    "Event":"GameStart",
+    "Time":0
+}
+{
+    "Type":"Tower",
+    "TowerName":"Gun",
+    "TowerIndex":1,
+    "Level":"1,1",
+    "Position":"3,2"
+    "Event":"Built",
+    "Money":-200,
+    "Time":50
+}
+{
+    "Type":"Money",
+    "MoneyGain":-200,
+    "FinalMoney":600,
+    "Event":"Built Gun",
+    "Time":50
+}
+{
+    "Type":"Tower",
+    "TowerName":"Gun",
+    "TowerIndex":1,
+    "Level":"1,1",
+    "Position":"5,2"
+    "Event":"Built",
+    "Money":-200,
+    "Time":80
+}
+{
+    "Type":"Money",
+    "MoneyGain":-200,
+    "FinalMoney":400,
+    "Event":"Built Gun",
+    "Time":80
+}
+{
+    "Type":"Enemy",
+    "MonsterName":"Tenacious Zombie",
+    "MonsterIndex":1,
+    "Event":"Generated",
+    "Num":4,
+    "DistanceLeft": 9,
+    "Time":100
+}
+{
+    "Type":"Enemy",
+    "MonsterName":"Tenacious Zombie",
+    "MonsterIndex":1,
+    "Event":"Killed",
+    "Num":1,
+    "DistanceLeft": 8,
+    "Time":150
+}
+{
+    "Type":"Money",
+    "MoneyGain":100,
+    "FinalMoney":500,
+    "Event":"Kill Tenacious Zombie",
+    "Time":150
+}
+{
+    "Type":"Enemy",
+    "MonsterName":"Tenacious Zombie",
+    "MonsterIndex":1,
+    "Event":"Killed",
+    "Num":1,
+    "DistanceLeft": 8,
+    "Time":155
+}
+{
+    "Type":"Money",
+    "MoneyGain":100,
+    "FinalMoney":600,
+    "Event":"Kill Tenacious Zombie",
+    "Time":155
+}
+{
+    "Type":"Tower",
+    "TowerName":"Gun",
+    "TowerIndex":1,
+    "Level":"2,1",
+    "Position":"5,2"
+    "Event":"Upgraded",
+    "Money":-300,
+    "Time":160
+}
+{
+    "Type":"Money",
+    "MoneyGain":-300,
+    "FinalMoney":300,
+    "Event":"Upgraded Gun",
+    "Time":160
+}
+{
+    "Type":"Enemy",
+    "MonsterName":"Tenacious Zombie",
+    "MonsterIndex":1,
+    "Event":"Arrived",
+    "Num":1,
+    "DistanceLeft": 0,
+    "Time":355
+}
+{
+    "Type":"Enemy",
+    "MonsterName":"Tenacious Zombie",
+    "MonsterIndex":1,
+    "Event":"Arrived",
+    "Num":1,
+    "DistanceLeft": 0,
+    "Time":360
+}
+{
+    "Type":"Money",
+    "MoneyGain":0,
+    "FinalMoney":300,
+    "Event":"GameEnd",
+    "Time":360
+}
+
