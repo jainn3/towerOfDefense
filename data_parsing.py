@@ -13,7 +13,12 @@ monsterKilledLastSeg = dict()
 totZoombies = 0
 def read_game_statistics(filename):
     json_data = open(filename).read()
+    json_data = json_data.rstrip(',')
+    if json_data[0] != "[":
+        json_data = "[" + json_data + "]"
+
     data = json.loads(json_data)
+
     return data
 
 def parse_json(game_data):
