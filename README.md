@@ -1,4 +1,4 @@
 ﻿# towerOfDefense
- To run this, you need to import  - data_parsing, sklearn.svm, randint, cPickle, os.
+ To run this, you need to install  - sklearn.svm, cPickle.
  
- The api works in the following way - (fun_level, difficulty_level) = evaluate(json_file_path)
+ The api (TowOfDefDataSet.py) works in the following way - (fun_level, difficulty_level) = evaluate(json_file_path)
