@@ -86,9 +86,9 @@ for i in range(0,500,1):
 def classification():
     for i in range(0,5000,1):
         row = getRow()
-        f_level_index = randint(5,len(fun_level)-1)
+        f_level_index = randint(6,len(fun_level)-1)
         _fun_level = fun_level[f_level_index]
-        d_level_index = randint(5,len(fun_level)-1)
+        d_level_index = randint(6,len(fun_level)-1)
         _difficulty_level = diff_level[d_level_index]
         difficultyLevelOutput.append(_difficulty_level)
         funLevelOuput.append(_fun_level)
