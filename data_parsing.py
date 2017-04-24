@@ -106,10 +106,15 @@ def getData(filename):
     row.append(numOfUpgrades)
     row.append(totTowerCount)
 
-    return row
+    new_row = []
+
+    new_row.append(float(final_Money) / float(initial_Money))
+    new_row.append(totZoombies)
+    new_row.append(totmonsterkilled/totZoombies)
+    new_row.append(totmonsterkilledlastseg/totZoombies)
+    new_row.append(numOfUpgrades)
+    new_row.append(totTowerCount)
+
+    return new_row
 if __name__ == '__main__':
     row = getData('sample_log.json')
-
-
-
-
