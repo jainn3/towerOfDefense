@@ -5,8 +5,8 @@ from sklearn.svm import SVC
 import cPickle
 import data_parsing
 initialMoney = [200,250,300,350,400]
-totZombies_l = 30
-totZombies_h = 70
+totZombies_l = 50
+totZombies_h = 200
 percentage_dead = 70
 percentage_dead_last_seg = 40
 noOfTowerUpgrades_l = 5
@@ -140,8 +140,10 @@ def classification():
 def evaluate(filename):
     testData = []
     testData.append(data_parsing.getData(filename))
-    if not os.path.exists('funlevel_classifier.pkl') or not os.path.exists('difflevel_classifier.pkl'):
-        classification()
+    #print testData
+    #testData = [0.065,311,0,0,14,54]
+    #if not os.path.exists('funlevel_classifier.pkl') or not os.path.exists('difflevel_classifier.pkl'):
+    classification()
     with open('funlevel_classifier.pkl', 'rb') as fid:
         clf_fun = cPickle.load(fid)
     with open('difflevel_classifier.pkl', 'rb') as fid:
@@ -166,4 +168,11 @@ def evaluate(filename):
     diff_level = clf_diff.predict(testData)
     return fun_level[0], diff_level[0]
 if __name__ == '__main__':
-    print evaluate('sample_log.json')
+    pred = []
+    for i in range(0,20):
+        pred.append(evaluate('log_'+str(i)))
+    actual = [1,5,8,7,5,4,6,5,3,7,6,5,8,7,5,5,4,6,5,7,9]
+    for i in range(0,len(actual)-1):
+        print str(pred[i]) + " " + str(actual[i])
+    
+    

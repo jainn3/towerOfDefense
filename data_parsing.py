@@ -29,6 +29,19 @@ def parse_json(game_data):
     global towerCount
     global monsterKilled
     global monsterKilledLastSeg
+    '''
+    initialize the global variables
+    '''
+    event_dict = dict()
+    type_dict = dict()
+    initial_Money = 0
+    final_Money = 0
+    numOfUpgrades = 0
+    towerCount = dict()
+    monsterKilled = dict()
+    monsterKilledLastSeg = dict()
+    totZoombies = 0
+
     for event in game_data:
         event_key = event["Event"]
         type_key = event["Type"]
@@ -100,7 +113,8 @@ def getData(filename):
     for k,v in monsterKilled.iteritems():
         totmonsterkilledlastseg += int(v)
     for k,v in towerCount.iteritems():
-        totTowerCount += int(v)
+        #totTowerCount += int(v)
+        totTowerCount += 1
     row.append(totmonsterkilled)
     row.append(totmonsterkilledlastseg)
     row.append(numOfUpgrades)
@@ -110,11 +124,19 @@ def getData(filename):
 
     new_row.append(float(final_Money) / float(initial_Money))
     new_row.append(totZoombies)
-    new_row.append(totmonsterkilled/totZoombies)
-    new_row.append(totmonsterkilledlastseg/totZoombies)
+    '''
+    int/int = int, that's why two feature below always get 0
+    change to float
+    '''
+    new_row.append(totmonsterkilled*1.0/totZoombies)
+    new_row.append(totmonsterkilledlastseg*1.0/totZoombies)
     new_row.append(numOfUpgrades)
     new_row.append(totTowerCount)
 
     return new_row
 if __name__ == '__main__':
     row = getData('sample_log.json')
+
+
+
+
